@@ -2,7 +2,7 @@
 
 Finally, a modular WYSIWYG editor that is simple, clean, and easy to implement.
 
-![editur_demo](/wiki/editur_demo.gif?raw=true | width=80%)
+![editur_demo](/wiki/editur_demo.gif?raw=true | width=100)
 
 It uses the following tools, all of which are included in their respective css/ and js/ files.
 
@@ -87,7 +87,7 @@ To initialize a new editor instance, simply call the `.init()` function with the
 
 ### A persistent toolbar
 
-![editur_scroll](/wiki/editur_scroll.gif?raw=true | width=80%)
+![editur_scroll](/wiki/editur_scroll.gif?raw=true | width=100)
 
 ## Some More Information
 
