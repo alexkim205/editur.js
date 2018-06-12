@@ -17,7 +17,6 @@ $(function () {
   function draw_editor() {
     wysiwyg.init({
       element: $(".outer-container"),
-      onChange: html => console.log(),
       defaultParagraphSeparator: 'p',
 
       actions: [

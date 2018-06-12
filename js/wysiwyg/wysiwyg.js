@@ -56,7 +56,7 @@ var init = function init(settings) {
 
     // if (firstChild && firstChild.nodeType === 3) exec('formatBlock', '<' + defaultParagraphSeparator + '>');
     // else if (content.innerHTML === '<br>') content.innerHTML = '';
-    settings.onChange(content.innerHTML);
+    // settings.onChange(content.innerHTML);
 
     // make sure there is always <br> at end of document
 
