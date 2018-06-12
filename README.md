@@ -1,6 +1,6 @@
 # editur.js
 
-![editur_demo]\(https://github.com/alexkim205/editur.js/blob/master/wiki/editur_demo.gif?raw=true) 
+![editur_demo](/wiki/editur_demo.gif?raw=true)
 
 This is a modular WYSIWYG editor that is simple, clean and easy to use. It uses the following tools, all of which are included in their respective css/ and js/ files.
 - JQuery (current <= 3.3.1)
@@ -47,7 +47,7 @@ Check out the demo in the `html/` folder.
 
 ### A persistent toolbar
 
-![editur_scroll]\(https://github.com/alexkim205/editur.js/blob/master/wiki/editur_scroll.gif?raw=true)
+![editur_scroll](/wiki/editur_scroll.gif?raw=true)
 
 ## More Information
 
