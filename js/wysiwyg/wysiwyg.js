@@ -2,6 +2,7 @@ import {
   defaultActions,
   defaultClasses
 } from './actions.js'
+console.log("imported ./actions.js")
 import {
   exec,
   _extends,
@@ -13,6 +14,7 @@ import {
   getRangeObject
 } from './functions.js'
 import FileHistory from './file_history.js'
+console.log("imported ./file_history.js")
 
 var DEBUG = true
 var defaultParagraphSeparatorString = 'defaultParagraphSeparator';

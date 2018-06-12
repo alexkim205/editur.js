@@ -17,28 +17,21 @@
   <!-- Font Awesome 5 -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
+
   <!-- Custom CSS Files -->
   <link rel="stylesheet" type="text/css" href="../css/editor_base.css" />
 </head>
 
 <body>
-  <div class="body-content">
-    <div style="width: 100%;
-            background-color:white;
-            padding: 30px 0 30px 0;
-            height: 1000px">
-      <div class="container-nr">
-        <div class="title">
-          <input type="text" name="title" placeholder="Page title..." id="page-title" autocomplete="off">
-          <br>
-          <input type="text" name="page-description" placeholder="Page description..." id="page-description" autocomplete="off">
-        </div>
 
-        <div class="outer-container">
-
-        </div>
-      </div>
+  <div class="container-nr">
+    <div class="title">
+      <input type="text" name="title" placeholder="Page title..." id="page-title" autocomplete="off">
+      <br>
+      <input type="text" name="page-description" placeholder="Page description..." id="page-description" autocomplete="off">
     </div>
+
+    <div class="outer-container"></div>
   </div>
 
   <!-- LOAD SCRIPTS -->
@@ -52,11 +45,7 @@
   <script src="../js/rangy/rangy-textrange.js"></script>
 
   <!-- Custom JS Files -->
-  <script type="module" src="../js/wysiwyg/functions.js"></script>
-  <script type="module" src="../js/wysiwyg/actions.js"></script>
-  <script type="module" src="../js/wysiwyg/file_history.js"></script>
-  <script type="module" src="../js/wysiwyg/wysiwyg.js"></script>
-  <script type="module" src="../js/editor_base.js"></script>
+  <script type="module" src="../js/editur.js"></script>
 </body>
 
 </html>

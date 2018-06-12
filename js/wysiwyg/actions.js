@@ -2,6 +2,7 @@ import {
   exec,
   queryCommandState,
 } from './functions.js'
+console.log("imported ./functions.js")
 
 export var defaultActions = {
   font_drop: {
