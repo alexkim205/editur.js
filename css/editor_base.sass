@@ -1,0 +1,263 @@
+$padding:   10px
+$borderRadius:  3px
+
+// General Settings
+*
+    font-family: 'Open Sans', sans-serif
+    font-size: 15px
+    box-sizing: border-box
+
+// Typography
+    body
+    // padding-top: 55px
+    // -moz-transform: scale(0.9, 0.9) /* Moz-browsers */
+    // zoom: 0.9 /* Other non-webkit browsers */
+    // zoom: 90% /* Webkit browsers */
+
+// Particles + Glass
+.before-header
+    &>.particles-js-canvas-el // particles canvas
+        background-color: rgb(211, 160, 95)
+    
+// Typography
+h1
+    font-size: 3em !important
+    margin: 14px 0 14px 0
+    font-weight: 600
+    font-family: inherit
+h2
+    font-size: 2.5em !important
+    margin: 14px 0 14px 0
+    font-weight: 600
+    font-family: inherit
+h3
+    font-size: 2.1em !important
+    margin: 14px 0 14px 0
+    font-weight: 600
+    font-family: inherit
+h4
+    font-size: 1.8em !important
+    margin: 14px 0 14px 0
+    font-weight: 600
+    font-family: inherit
+h5
+    font-size: 1.5em !important
+    margin: 14px 0 14px 0
+    font-weight: 600
+    font-family: inherit
+pre
+    font-family: 'Overpass Mono', monospace !important
+    background-color: rgba(33, 33, 33, 0.1);
+    padding: 0.5em 1em 0.5em 1em;
+    // border-radius: 3px
+    // border: 2px solid black;
+    font-size: 0.8em !important
+    overflow: auto
+code
+    font-family: 'Overpass Mono', monospace !important
+    background-color: rgba(33, 33, 33, 0.1)
+        
+blockquote
+    margin: 1em 2.5em 1em 2.5em
+    border-left: 7px solid rgb(211, 160, 95)
+    background-color: whitesmoke
+    padding: 1em 1.3em 1em 1.3em
+    font-weight: 400
+    font-family: inherit
+p
+    font-weight: 400
+    font-family: inherit
+
+// Body Settings
+.body-content 
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+.container-nr
+    width: 100%;
+    max-width: 1100px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+
+.title
+    border-radius: $borderRadius
+    background-color: white
+    border: 2px solid rgba(0, 0, 0, 0.10)
+    // box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3)
+    margin-bottom: 25px
+    width: 100%
+    transition: all 0.3s
+
+    input
+        width: 100%
+        border-width: 0
+        padding: 0.44em 0.63em 0.44em 0.63em
+        // border-bottom: 1px solid rgba(0,0,0,0.10)
+
+        &#page-title
+            border-top-left-radius: inherit
+            border-top-right-radius: inherit
+            border-bottom: 1px dashed rgba(0,0,0,0.10)
+        &#page-description
+            border-bottom-left-radius: inherit
+            border-bottom-left-radius: inherit
+        
+        &:focus
+            outline: none
+    
+    &.outer-container
+        display: block
+    
+    // &:focus
+    //     transform: scale(1.008, 1.008)
+
+
+.outer-container
+    width: 100%
+    height: 800px
+    border-radius: $borderRadius
+    background-color: white
+    border: 2px solid rgba(0, 0, 0, 0.10)
+    // box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3)
+    display: flex
+    flex-direction: column
+    transition: all 0.3s
+
+    .toolbar
+        border-bottom: 2px solid rgba(0, 0, 0, 0.10)
+        background-color: white
+        padding-left: 10px
+        flex-wrap: wrap
+        display: flex
+        // padding: $padding 2*$padding $padding 2*$padding
+
+        &.sticky
+            position: fixed
+            top: 0px
+            // width: 100%
+            &+.editor
+                // padding-top: 80px
+            &>.separator
+                margin-top: 0
+
+        .button
+            all: unset;
+            /* height: 20px; */
+            margin: 10px 0 10px 10px;
+            cursor: pointer;
+            width: 20px;
+            text-align: center;
+            padding:  5px  5px;
+            /* background-color: lightblue; */
+            border-radius: 3px;
+            
+            &:hover
+                background-color: rgba(0, 0, 0, 0.05)
+                i
+                    color: rgba(0,0,0,0.7)
+
+            i
+                color: gray
+        
+        .button-selected
+            background-color: rgba(0, 0, 0, 0.18)
+            i
+                color: rgba(0,0,0,0.7)
+                
+        
+        .separator
+            margin:  5px 10px 0 10px
+            border-right: 2px solid rgba(0, 0, 0, 0.10)
+            transition: margin 0.5s
+
+        .dropdown
+            position: relative;
+            /* all: unset; */
+            /* height: 20px; */
+            border-radius: 3px;
+            margin: auto 10px auto 10px;
+            cursor: pointer;
+
+            .dropdown-button
+                // color: white
+                border: none
+                cursor: pointer 
+                padding: 0 
+                border: 2px solid rgba(0, 0, 0, 0.10)
+                padding: 3px 12px 
+                border-radius: $borderRadius
+                i
+                    position: relative
+                    &.fa-caret-down
+                        position: absolute
+                        top: 11px
+                        right: -7px
+                        font-size: 8px
+                &.open
+                    z-index: 2;
+                    border-bottom-left-radius: 0px;
+                    border-bottom: 2px solid white;
+                    position: relative;
+            
+            .dropdown-content
+                display: none 
+                background-color: white 
+                border: 2px solid rgba(0, 0, 0, 0.10)
+                // border-top: 0px 
+                // box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.1) 
+                z-index: 1 
+                width: auto
+                // width: 200px 
+                padding: 10px 
+                border-bottom-left-radius: $borderRadius
+                border-bottom-left-radius: $borderRadius
+                text-align: left 
+                position: absolute
+                transform: translateY(-2px)
+
+                &.show
+                    display: block
+
+                .dropdown-option
+                    white-space: nowrap
+                    *
+                        padding: 0
+                        margin: 0
+                        margin-bottom: 0.5rem
+                        
+                    
+        
+
+    .editor
+        overflow: scroll
+        height: 100%
+        width: 100%
+        background-color: white
+        border: 0px
+        padding: 1em 1.3em 1em 1.3em
+        resize: none
+        border-bottom-left-radius: inherit
+        border-bottom-right-radius: inherit
+        font-family: inherit
+        font-size: 18px
+
+        & *
+            font-family: inherit
+            font-size: 1em
+
+        &:focus
+            outline: none
+
+    .statusbar
+        background-color: rgb(255, 166, 49)
+        height: 1.5em
+        width: 100%
+        border-bottom-left-radius: $borderRadius
+        border-bottom-right-radius: $borderRadius
+
+        .status-element
+            margin: 0 1em 0 1em

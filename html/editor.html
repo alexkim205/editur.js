@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>An Editur Demonstration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- LOAD STYLES -->
+
+  <!-- Google Fonts -->
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <!-- Custom CSS Files -->
+  <link rel="stylesheet" type="text/css" href="../css/editor_base.css" />
+</head>
+
+<body>
+  <div class="body-content">
+    <div style="width: 100%;
+            background-color:white;
+            padding: 30px 0 30px 0;
+            height: 1000px">
+      <div class="container-nr">
+        <div class="title">
+          <input type="text" name="title" placeholder="Page title..." id="page-title" autocomplete="off">
+          <br>
+          <input type="text" name="page-description" placeholder="Page description..." id="page-description" autocomplete="off">
+        </div>
+
+        <div class="outer-container">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOAD SCRIPTS -->
+
+  <!-- JQuery -->
+  <script src="../js/jquery/jquery-3.3.1.min.js"></script>
+
+  <!-- Rangy Core and Modules -->
+  <script src="../js/rangy/rangy-core.js"></script>
+  <script src="../js/rangy/rangy-classapplier.js"></script>
+  <script src="../js/rangy/rangy-textrange.js"></script>
+
+  <!-- Custom JS Files -->
+  <script type="module" src="../js/wysiwyg/functions.js"></script>
+  <script type="module" src="../js/wysiwyg/actions.js"></script>
+  <script type="module" src="../js/wysiwyg/file_history.js"></script>
+  <script type="module" src="../js/wysiwyg/wysiwyg.js"></script>
+  <script type="module" src="../js/editor_base.js"></script>
+</body>
+
+</html>
