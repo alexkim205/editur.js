@@ -42,8 +42,7 @@ This is a modular WYSIWYG editor that is simple, clean and easy to use. It uses 
 <!-- Import editur.js-->
 <script type="module" src="js/editur.js"></script>
 ```
-
-If you are confused about how to use the , check out the demo in the `html/` folder. 
+Check out how to properly use editur.js the demo in the `html/` folder. 
 
 ### A persistent toolbar
 
