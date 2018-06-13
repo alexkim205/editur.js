@@ -108,12 +108,8 @@ var init = function init(settings) {
     sel.deleteFromDocument()
     var rangeChildNodes = range.startContainer.childNodes
     var isEmptyLine = [sel.baseNode.tagName, sel.focusNode.tagName, sel.anchorNode.tagName, sel.extentNode.tagName].every((val, i, arr) => val === arr[0])
-    // sel.collapse(sel.focusNode, sel.focusOffset-1)
     var saved_selFocusNode = sel.focusNode
     var saved_selFocusOffset = sel.focusOffset
-
-    // DEBUG && console.log("childnodeslength: " + range.endContainer.childNodes.length)
-    // console.log("length:")
 
     if ( // if break in middle of line
       (sel.focusNode.length != null &&
@@ -128,12 +124,9 @@ var init = function init(settings) {
       range.insertNode(brToInsert1)
       range.setEndAfter(brToInsert1)
       range.collapse()
-      // DEBUG && console.log("1 and 2")
     }
     // end of line of last line
     else if (checkParent(range)) {
-      // DEBUG && console.log(3)
-      //exec("outdent")
       // if haven't reached parent container
       var pbrToInsert
       pbrToInsert = $("<p>").append($("<br>")).get(0)
@@ -145,37 +138,23 @@ var init = function init(settings) {
       range.collapse()
 
       if (checkParent(range)) {
-        // DEBUG && console.log("ET has not returned home")
-
-        // block within a block empty line don't exit
-        // (isEmptyLine && range.endOffset < range.endContainer.childNodes.length)
-
         let nestedSelection = getUserSelection()
         let nestedRange = getRangeObject(nestedSelection)
         let nestedNodes = nestedRange.startContainer.childNodes
         let nestedNodesContainer = nestedNodes[nestedRange.startOffset - 1] // blockquote within the blockquote
-        // DEBUG && console.log(nestedSelection)
-        // DEBUG && console.log(nestedRange)
 
         // if last child not br, don't exit
         if (nestedNodesContainer.lastChild.nodeName != "BR") {
-          // DEBUG && console.log(2.5)
-          // nestedRange.setEnd()
-          // range.insertNode(brToInsert1)
-          // range.collapse()
         } else {
           let nodes_in_nest = nestedNodesContainer.childNodes
-          // DEBUG && console.log(nodes_in_nest)
           // delete last br's if there are
           for (let i = nodes_in_nest.length - 1; i >= 0; --i) {
-            // DEBUG && console.log(i)
             if (nodes_in_nest[i].tagName == "BR") {
               nestedRange.setStart(nestedNodesContainer, i)
             } else {
               break
             }
           }
-          // DEBUG && console.log(nestedNodesContainer.childNodes)
 
           nestedRange.deleteContents()
           nestedRange.setStartAfter(nestedNodesContainer)
@@ -192,9 +171,6 @@ var init = function init(settings) {
         range.setStart(save_startContainer, save_startOffset)
         range.setEndAfter(range.startContainer)
 
-        // DEBUG && console.log(range)
-        // DEBUG && console.log(getUserSelection())
-        // delete if true last line
         range.deleteContents()
         range.setEndAfter(save_startContainer)
         range.collapse()
@@ -209,10 +185,7 @@ var init = function init(settings) {
       range.setEndAfter(range.endContainer)
       range.deleteContents()
 
-      // DEBUG && console.log(4)
       range.insertNode(brToInsert1)
-      // range.insertNode(brToInsert2)
-      // var textToInsert = document.createTextNode("EETT")
       var brToInsert = $("<br>").get(0) //.after(textToInsert).get(0)
 
       range.insertNode(brToInsert)
