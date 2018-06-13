@@ -2,7 +2,7 @@
 
 Finally, a modular WYSIWYG editor that is simple, clean, and easy to implement.
 
-![editur_demo](/wiki/editur_demo.gif?raw=true) <!-- .element width="65%" -->
+![editur_demo](/wiki/editur_demo2.gif?raw=true) <!-- .element width="65%" -->
 
 It uses the following tools, all of which are included in their respective css/ and js/ files.
 
